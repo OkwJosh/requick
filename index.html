@@ -25,7 +25,7 @@
       margin: auto;
     }
 
-    form {
+    .form-section {
       background: white;
       padding: 20px;
       margin-bottom: 40px;
@@ -33,7 +33,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    form h2 {
+    .form-section h2 {
       margin-top: 0;
       color: #004aad;
     }
@@ -44,7 +44,7 @@
       font-weight: bold;
     }
 
-    input, textarea, button {
+    input, textarea {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -53,11 +53,17 @@
       box-sizing: border-box;
     }
 
-    button {
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
       background: #004aad;
       color: white;
-      font-weight: bold;
+      border: none;
+      border-radius: 10px;
       cursor: pointer;
+      font-weight: bold;
     }
 
     footer {
@@ -76,88 +82,94 @@
   </header>
 
   <main>
-    <!-- Applicant Form -->
-    <form id="applicantForm">
-      <h2>Applicant Form</h2>
+    <form id="fullForm">
+      <!-- Applicant Section -->
+      <div class="form-section">
+        <h2>Applicant Form</h2>
 
-      <label for="applicant-name">Full Name</label>
-      <input type="text" id="applicant-name" required>
+        <label for="applicant-name">Full Name</label>
+        <input type="text" id="applicant-name" required>
 
-      <label for="applicant-dob">Date of Birth</label>
-      <input type="date" id="applicant-dob" required>
+        <label for="applicant-dob">Date of Birth</label>
+        <input type="date" id="applicant-dob" required>
 
-      <label for="applicant-email">Email Address</label>
-      <input type="email" id="applicant-email" required>
+        <label for="applicant-email">Email Address</label>
+        <input type="email" id="applicant-email" required>
 
-      <label for="applicant-jobs">Past Jobs</label>
-      <textarea id="applicant-jobs" rows="3" required></textarea>
+        <label for="applicant-license">Driver's License</label>
+        <input type="text" id="applicant-license" required>
 
-      <label for="applicant-reason">Why should we hire you?</label>
-      <textarea id="applicant-reason" rows="4" required></textarea>
+        <label for="appliacant-ssn">SSN</label>
+        <input type="text" id="appliacant-ssn" required>
 
-      <label for="applicant-date">Date of Application</label>
-      <input type="date" id="applicant-date" required>
+        <label for="applicant-jobs">Past Jobs</label>
+        <textarea id="applicant-jobs" rows="3" required></textarea>
 
-      <label for="applicant-education">Education Qualifications</label>
-      <textarea id="applicant-education" rows="3" required></textarea>
+        <label for="applicant-reason">Why should we hire you?</label>
+        <textarea id="applicant-reason" rows="4" required></textarea>
 
-      <button type="submit">Submit Applicant Info</button>
-    </form>
+        <label for="applicant-date">Date of Application</label>
+        <input type="date" id="applicant-date" required>
 
-    <!-- Guarantor Form 1 -->
-    <form id="guarantorForm1">
-      <h2>Guarantor Form 1</h2>
+        <label for="applicant-education">Education Qualifications</label>
+        <textarea id="applicant-education" rows="3" required></textarea>
+      </div>
 
-      <label for="guarantor1-name">Full Name</label>
-      <input type="text" id="guarantor1-name" required>
+      <!-- Guarantor 1 Section -->
+      <div class="form-section">
+        <h2>Guarantor Form 1</h2>
 
-      <label for="guarantor1-dob">Date of Birth</label>
-      <input type="date" id="guarantor1-dob" required>
+        <label for="guarantor1-name">Full Name</label>
+        <input type="text" id="guarantor1-name" required>
 
-      <label for="guarantor1-email">Email Address</label>
-      <input type="email" id="guarantor1-email" required>
+        <label for="guarantor1-dob">Date of Birth</label>
+        <input type="date" id="guarantor1-dob" required>
 
-      <label for="guarantor1-address">Residential Address</label>
-      <textarea id="guarantor1-address" rows="2" required></textarea>
+        <label for="guarantor1-email">Email Address</label>
+        <input type="email" id="guarantor1-email" required>
 
-      <label for="guarantor1-license">Driver's License</label>
-      <input type="text" id="guarantor1-license" required>
+        <label for="guarantor1-address">Residential Address</label>
+        <textarea id="guarantor1-address" rows="2" required></textarea>
 
-      <label for="guarantor1-ssn">SSN</label>
-      <input type="text" id="guarantor1-ssn" required>
+        <label for="guarantor1-license">Driver's License</label>
+        <input type="text" id="guarantor1-license" required>
 
-      <label for="guarantor1-relation">Relation to Applicant</label>
-      <input type="text" id="guarantor1-relation" required>
+        <label for="guarantor1-ssn">SSN</label>
+        <input type="text" id="guarantor1-ssn" required>
 
-      <button type="submit">Submit Guarantor 1 Info</button>
-    </form>
+        <label for="guarantor1-relation">Relation to Applicant</label>
+        <input type="text" id="guarantor1-relation" required>
+      </div>
 
-    <!-- Guarantor Form 2 -->
-    <form id="guarantorForm2">
-      <h2>Guarantor Form 2</h2>
+      <!-- Guarantor 2 Section -->
+      <div class="form-section">
+        <h2>Guarantor Form 2</h2>
 
-      <label for="guarantor2-name">Full Name</label>
-      <input type="text" id="guarantor2-name" required>
+        <label for="guarantor2-name">Full Name</label>
+        <input type="text" id="guarantor2-name" required>
 
-      <label for="guarantor2-dob">Date of Birth</label>
-      <input type="date" id="guarantor2-dob" required>
+        <label for="guarantor2-dob">Date of Birth</label>
+        <input type="date" id="guarantor2-dob" required>
 
-      <label for="guarantor2-email">Email Address</label>
-      <input type="email" id="guarantor2-email" required>
+        <label for="guarantor2-email">Email Address</label>
+        <input type="email" id="guarantor2-email" required>
 
-      <label for="guarantor2-address">Residential Address</label>
-      <textarea id="guarantor2-address" rows="2" required></textarea>
+        <label for="guarantor2-address">Residential Address</label>
+        <textarea id="guarantor2-address" rows="2" required></textarea>
 
-      <label for="guarantor2-license">Driver's License</label>
-      <input type="text" id="guarantor2-license" required>
+        <label for="guarantor2-license">Driver's License</label>
+        <input type="text" id="guarantor2-license" required>
 
-      <label for="guarantor2-ssn">SSN</label>
-      <input type="text" id="guarantor2-ssn" required>
+        <label for="guarantor2-ssn">SSN</label>
+        <input type="text" id="guarantor2-ssn" required>
 
-      <label for="guarantor2-relation">Relation to Applicant</label>
-      <input type="text" id="guarantor2-relation" required>
+        <label for="guarantor2-relation">Relation to Applicant</label>
+        <input type="text" id="guarantor2-relation" required>
+      </div>
 
-      <button type="submit">Submit Guarantor 2 Info</button>
+      <!-- One Single Submit Button -->
+      <button type="submit" class="submit-button">Submit All Information</button>
+
     </form>
   </main>
 
@@ -166,23 +178,11 @@
   </footer>
 
   <script>
-    document.getElementById('applicantForm').addEventListener('submit', function(e) {
+    document.getElementById('fullForm').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Applicant info submitted successfully!');
-      this.reset();
-    });
-
-    document.getElementById('guarantorForm1').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Guarantor 1 info submitted successfully!');
-      this.reset();
-    });
-
-    document.getElementById('guarantorForm2').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Guarantor 2 info submitted successfully!');
-      this.reset();
+      window.location.href = 'success.html';
     });
   </script>
+
 </body>
 </html>
